@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Item Details</title>
+</head>
+<body>
+    <a href="{% url 'item_list_url' %}">All Items</a>
+
+    
+    <h1>{{ item.name }}</h1>
+    <h2>{{ item.price }} $</h2>
+    <h3>{{ item.description }}</h3>
+</body>
+</html>
