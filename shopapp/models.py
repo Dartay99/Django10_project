@@ -10,3 +10,13 @@ class Item(models.Model):
     
     def __str__(self):
         return str(self.pk)+'-'+str(self.name)
+
+class Customer(models.Model):
+    first_name=models.CharField(max_length=100)
+    last_name=models.CharField(max_length=100)
+    email=models.EmailField()
+    phone=models.CharField(max_length=10)
+    password=models.CharField(max_length=100)
+    
+    def __str__(self):
+        return str(self.pk)+'-'+str(self.first_name)+'-'+str(self.last_name)

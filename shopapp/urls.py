@@ -7,4 +7,7 @@ urlpatterns = [
     path('items', ItemListView.as_view(), name='item_list_url'),
     path('item/<int:pk>', ItemDetailView.as_view(), name='item_detail_url'),
     path('item/create', ItemCreateView.as_view(), name='item_create_url'),
+    
+    path('customers', CustomersView, name='customers_list_url'),
+    path('customer/<int:customer_id>', CustomerDetailView, name='customer_detail_url'),
 ]

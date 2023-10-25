@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+</head>
+<body>
+    <h1>{{ message }}</h1>
+    <ul>
+        {% for customer in customers %}
+            <li>{{ customer.first_name}} {{customer.last_name}}</li>
+            <p>
+                <a href="{% url 'customer_detail_url' customer.id %}">Get Info</a>
+            </p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
